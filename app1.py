@@ -20,7 +20,8 @@ plt.xlabel('Mes', fontsize=12)
 plt.ylabel('Ingresos', fontsize=12)
 plt.legend(title='Producto', fontsize=10, title_fontsize=11)
 plt.tight_layout()
-plt.show()
+st.pyplot(plt.gcf())
+
 
 # Estilo
 sns.set_theme(style="whitegrid", context="talk")
@@ -39,7 +40,6 @@ plt.title('Cantidades venmdidas  por mes altos productos', fontsize=14)
 plt.xlabel('Mes', fontsize=12)
 plt.ylabel('Canidades', fontsize=12)
 plt.legend(title='Producto', fontsize=10, title_fontsize=11)
-plt.tight_layout()
 plt.show()
 
 
