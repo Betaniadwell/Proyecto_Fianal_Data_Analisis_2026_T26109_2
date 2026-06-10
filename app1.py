@@ -42,7 +42,9 @@ plt.title('Cantidades vendidas  por mes altos productos', fontsize=14)
 plt.xlabel('Mes', fontsize=12)
 plt.ylabel('Cantidades', fontsize=12)
 plt.legend(title='Producto', fontsize=10, title_fontsize=11)
-plt.show()
+plt.tight_layout()
+
+st.pylot(plt.gcf())
 
 
 
