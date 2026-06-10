@@ -32,7 +32,7 @@ sns.set_theme(style="whitegrid", context="talk")
 plt.figure(figsize=(10,6))
 
 # Graficamos
-sns.lineplot(data=datos_anualesl, x="month", y="cantidad", hue="producto", palette = "Set2")
+sns.lineplot(data=datos_anuales, x="month", y="cantidad", hue="producto", palette = "Set2")
 
 # Ticks (valores de eje)
 plt.tick_params(axis='both', labelsize=10)
