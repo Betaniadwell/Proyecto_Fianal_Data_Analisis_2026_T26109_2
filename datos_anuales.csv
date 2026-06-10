@@ -1,0 +1,49 @@
+producto,month,year,cantidad,precio
+auriculares,1,2024,112,114235.0
+auriculares,2,2024,103,105581.0
+auriculares,3,2024,98,92567.0
+auriculares,4,2024,100,129956.0
+auriculares,5,2024,84,97560.0
+auriculares,6,2024,61,59547.0
+auriculares,7,2024,99,136043.0
+auriculares,8,2024,62,62805.0
+auriculares,9,2024,78,89949.0
+auriculares,10,2024,55,73159.0
+auriculares,11,2024,54,75136.0
+auriculares,12,2024,52,54591.0
+cafetera,1,2024,99,90247.0
+cafetera,2,2024,61,134438.0
+cafetera,3,2024,77,75330.0
+cafetera,4,2024,80,93741.0
+cafetera,5,2024,111,129185.0
+cafetera,6,2024,42,61688.0
+cafetera,7,2024,30,42108.0
+cafetera,8,2024,51,47610.0
+cafetera,9,2024,86,83475.0
+cafetera,10,2024,31,38316.0
+cafetera,11,2024,62,73284.0
+cafetera,12,2024,35,55423.0
+lámpara de mesa,1,2024,120,120583.0
+lámpara de mesa,2,2024,108,127055.0
+lámpara de mesa,3,2024,101,114224.0
+lámpara de mesa,4,2024,154,224368.0
+lámpara de mesa,5,2024,113,107887.0
+lámpara de mesa,6,2024,44,85596.0
+lámpara de mesa,7,2024,94,101592.0
+lámpara de mesa,8,2024,61,53971.0
+lámpara de mesa,9,2024,70,76704.0
+lámpara de mesa,10,2024,20,31573.0
+lámpara de mesa,11,2024,119,131718.0
+lámpara de mesa,12,2024,108,104612.0
+microondas,1,2024,23,15289.0
+microondas,2,2024,57,77552.0
+microondas,3,2024,69,83892.0
+microondas,4,2024,38,55413.0
+microondas,5,2024,62,80341.0
+microondas,6,2024,99,110044.0
+microondas,7,2024,116,130984.0
+microondas,8,2024,143,162363.0
+microondas,9,2024,91,101408.0
+microondas,10,2024,50,72271.0
+microondas,11,2024,102,89382.0
+microondas,12,2024,62,89937.0
