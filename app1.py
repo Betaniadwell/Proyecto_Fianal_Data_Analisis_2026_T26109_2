@@ -46,45 +46,25 @@ st.pyplot(plt.gcf())
 
 
 # =========================================================================
-# 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO (resumen_cat.csv)
-# =========================================================================
-# =========================================================================
-# 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO (resumen_cat.csv)
-# =========================================================================
-# =========================================================================
-# 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO (resumen_cat.csv CORREGIDO)
+# 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO
 # =========================================================================
 st.header("🥇 Segmentación del Mercado")
 
-# Leemos el archivo CSV tal como está en tu repositorio
-resumen_cat_rango = pd.read_csv("resumen_cat.csv")
+# Definimos los datos exactos basados en tu consulta de Colab:
+# Electrodomésticos = 5, Electrónica = 2, Decoración = 1
+valores_oro = [5, 2, 1]
+etiquetas_oro = ["Electrodomésticos", "Electrónica", "Decoración"]
 
-# 1. CORRECCIÓN DE NOMBRES: Traducimos los números de fila a las categorías reales
-# El '5' es Electrodomésticos (líder destacado con explode)
-nombres_categorias = {
-    5: "Electrodomésticos",
-    2: "Hogar y Moda",        # Ajusta estos dos nombres si corresponden a otras categorías de tu Colab
-    1: "Tecnología e Informática"
-}
-
-# Aplicamos los nombres reales basándonos en la columna que tiene los números 5, 2, 1 (segunda columna)
-etiquetas_reales = resumen_cat_rango.iloc[:, 1].map(nombres_categorias).fillna(resumen_cat_rango.iloc[:, 1])
-
-# 2. SELECCIÓN DE DATOS: Tomamos los valores de la columna del segmento "Oro"
-# En tu tabla de la captura, los valores que suman 1 + 3 + 3 = 7 corresponden a la tercera columna (índice 2)
-valores_oro = resumen_cat_rango.iloc[:, 2] 
-
-# Graficamos con los datos y nombres corregidos en tiempo real
 plt.clf()
 plt.figure(figsize=(10, 7))
 
 plt.pie(
     valores_oro,
-    labels=etiquetas_reales,
+    labels=etiquetas_oro,
     autopct='%1.1f%%',
     startangle=140,
-    colors=['#FFD700', '#3498db', '#2ecc71'], # Dorado para Electrodomésticos
-    explode=(0.1, 0, 0),                      # Resalta a Electrodomésticos
+    colors=['#FFD700', '#3498db', '#2ecc71'], # Dorado, Azul y Verde
+    explode=(0.1, 0, 0),                      # Resalta a Electrodomésticos (el líder con 5)
     shadow=True
 )
 
@@ -92,9 +72,8 @@ plt.title('Participación de Categorías en el Segmento "Oro"', fontsize=15, pad
 plt.legend(title="Categorías", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
 plt.tight_layout()
 
-# Mostramos el gráfico correcto en Streamlit
+# Mostramos el gráfico 
 st.pyplot(plt.gcf())
-
 
 
 # =========================================================================
