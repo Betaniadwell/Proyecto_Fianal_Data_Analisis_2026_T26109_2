@@ -48,12 +48,19 @@ st.pyplot(plt.gcf())
 # =========================================================================
 # 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO (resumen_cat.csv)
 # =========================================================================
+# =========================================================================
+# 3. NUEVO BLOQUE: PARTICIPACIÓN SEGMENTO ORO (resumen_cat.csv)
+# =========================================================================
 st.header("🥇 Segmentación del Mercado")
 
 plt.clf()
 plt.figure(figsize=(10, 7))
+
+# SOLUCIÓN AUTOMÁTICA: Tomamos la primera columna de datos numéricos que encuentre
+columna_datos = resumen_cat_rango.columns[0] 
+
 plt.pie(
-    resumen_cat_rango['A - Oro (Top 25%)'],
+    resumen_cat_rango[columna_datos], # Usa la columna correcta automáticamente
     labels=resumen_cat_rango.index,
     autopct='%1.1f%%',
     startangle=140,
@@ -65,6 +72,7 @@ plt.title('Participación de Categorías en el Segmento "Oro"', fontsize=15, pad
 plt.legend(title="Categorías", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
 plt.tight_layout()
 st.pyplot(plt.gcf())
+
 
 
 # =========================================================================
