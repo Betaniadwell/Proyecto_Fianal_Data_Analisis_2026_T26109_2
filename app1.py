@@ -53,25 +53,35 @@ st.pyplot(plt.gcf())
 # =========================================================================
 st.header("🥇 Segmentación del Mercado")
 
+# LEEMOS EL ARCHIVO DE NUEVO PERO SIN OBLIGARLO A TENER ÍNDICE FIXED
+resumen_cat_rango = pd.read_csv("resumen_cat.csv")
+
+# TRUCO: Mostramos la tabla en la app para ver cómo se llaman las columnas reales
+st.subheader("Visualización de los datos cargados:")
+st.dataframe(resumen_cat_rango)
+
 plt.clf()
 plt.figure(figsize=(10, 7))
 
-# SOLUCIÓN AUTOMÁTICA: Tomamos la primera columna de datos numéricos que encuentre
-columna_datos = resumen_cat_rango.columns[0] 
+# Intentamos graficar usando las dos primeras columnas del archivo dinámicamente
+columnas = resumen_cat_rango.columns
+valores = resumen_cat_rango.iloc[:, 1] # Toma la segunda columna (valores)
+etiquetas = resumen_cat_rango.iloc[:, 0] # Toma la primera columna (nombres)
 
 plt.pie(
-    resumen_cat_rango[columna_datos], # Usa la columna correcta automáticamente
-    labels=resumen_cat_rango.index,
+    valores,
+    labels=etiquetas,
     autopct='%1.1f%%',
     startangle=140,
     colors=['#FFD700', '#3498db', '#2ecc71'],
-    explode=(0.1, 0, 0),  
+    explode=(0.1, 0, 0) if len(valores) == 3 else None,  # Evita errores si no son 3 elementos
     shadow=True
 )
 plt.title('Participación de Categorías en el Segmento "Oro"', fontsize=15, pad=20)
 plt.legend(title="Categorías", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
 plt.tight_layout()
 st.pyplot(plt.gcf())
+
 
 
 
