@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-# 1. CARGAR LOS DATOS (¡Esto es lo más importante que faltaba!)
+# 1. CARGAR LOS DATOS 
 datos_anuales = pd.read_csv("datos_anuales.csv")
 
 
@@ -52,5 +52,4 @@ plt.ylabel('Cantidades', fontsize=12)
 plt.legend(title='Producto', fontsize=10, title_fontsize=11)
 plt.tight_layout()
 
-# CORREGIDO: comando st.pyplot correcto sin errores de tipeo
 st.pyplot(plt.gcf())
